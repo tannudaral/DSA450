@@ -1,3 +1,5 @@
+// Program to reverse an array.
+
 #include <iostream>
 using namespace std;
 
@@ -23,9 +25,13 @@ void print_array(int arr[], int size)
 
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 5, 6};
-    int n = sizeof(arr)/sizeof(arr[0]);
-
+    int n;
+    cout<<"Enter the size of array: ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the array elements: ";
+    for(int i=0; i<n; i++)
+    cin>>arr[i];
     print_array(arr, n);
     rev_array(arr, 0, n-1);
 
